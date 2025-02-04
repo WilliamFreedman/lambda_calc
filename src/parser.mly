@@ -1,3 +1,7 @@
+%{
+    open Ast
+%}
+
 %token LAMBDA DOT LPAREN RPAREN EOF
 %token <string> VARIABLE
 

@@ -1,0 +1,9 @@
+(menhir
+ (modules parser))
+
+(ocamllex scanner)
+
+(executable
+ (name main)
+ (modules ast main parser scanner)
+ (libraries str))
