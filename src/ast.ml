@@ -38,6 +38,6 @@ let rec string_of_ast expr =
   | Var s ->
       s
   | Lambda (v, body) ->
-      "(\\" ^ v ^ ". " ^ string_of_ast body ^ ")"
+      "(lambda" ^ v ^ ". " ^ string_of_ast body ^ ")"
   | Func_Apply (e1, e2) ->
       "(" ^ string_of_ast e1 ^ " " ^ string_of_ast e2 ^ ")"
