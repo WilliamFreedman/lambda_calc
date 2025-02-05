@@ -23,5 +23,5 @@ let () =
     | Parsing.Parse_error ->
         failwith "Parse error!"
   in
-  print_expr result;
+  (*print_expr result;*)
   printf "%s\n" (string_of_ast (run_evaluation evaluator_func result))
