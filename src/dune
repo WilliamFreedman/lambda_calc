@@ -5,5 +5,5 @@
 
 (executable
  (name main)
- (modules ast evaluate main parser scanner naive)
+ (modules ast evaluate main parser scanner naive_evaluator capture_avoiding_evaluator util generic_evaluator)
  (libraries str))
