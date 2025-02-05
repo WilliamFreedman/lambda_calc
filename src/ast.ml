@@ -32,4 +32,12 @@ type expr =
 
 let print_expr (e : expr) : unit =
   print_expr_tree e "" true
-        
+
+let rec string_of_ast expr =
+  match expr with
+  | Var s ->
+      s
+  | Lambda (v, body) ->
+      "(\\" ^ v ^ ". " ^ string_of_ast body ^ ")"
+  | Func_Apply (e1, e2) ->
+      "(" ^ string_of_ast e1 ^ " " ^ string_of_ast e2 ^ ")"
